@@ -1,6 +1,6 @@
 'use client'
 
-import { useChat, type Message } from '@ai-sdk/react'
+import { useChat, type Message } from 'ai/react'
 import { motion } from 'framer-motion'
 import { Send, User, Bot, Loader2, PlayCircle } from 'lucide-react'
 import { useEffect, useRef } from 'react'
