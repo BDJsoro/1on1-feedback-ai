@@ -31,13 +31,13 @@ export async function POST(req: Request) {
   try {
     const { messages } = await req.json()
 
-    const result = streamText({
+    const result = await streamText({
       model: openai('gpt-4o-mini'),
       messages,
       system: SYSTEM_PROMPT,
     })
 
-    return result.toTextStreamResponse()
+    return result.toAIStreamResponse()
   } catch (error) {
     console.error("AI API Error:", error)
     return new Response(JSON.stringify({ error: "API Key가 설정되지 않았거나 호출 한도에 도달했습니다. Vercel 환경 변수를 확인해주세요." }), {
