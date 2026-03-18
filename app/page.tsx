@@ -125,13 +125,7 @@ export default function ChatPage() {
           </button>
         </div>
         <div className="text-center mt-3">
-          <button 
-            type="button" 
-            onClick={() => append({ id: 'end', role: 'user', content: '대화 종료' })}
-            className="text-[12px] text-gray-400 hover:text-gray-600 transition-colors cursor-pointer"
-          >
-            대화를 끝내려면 여기를 누르거나 '대화 종료'라고 입력하세요.
-          </button>
+          <p className="text-[11px] text-gray-400">대화를 끝내려면 &apos;대화 종료&apos;라고 입력하세요.</p>
         </div>
       </form>
     </div>
